@@ -6,27 +6,29 @@ loses = 0
 
 	puts "Chose - rock, paper, or scissors?"
 	chose = gets.chomp
+		#options = computer; chose = human
+		#"and" is &&
+
 
 		if options == chose
-			then puts draw
+			then puts "draw"
 		elsif options == "rock" && chose == "paper"
 			then win = + 1
-		elsif options == "rock" && human has scissors
+		elsif options == "rock" && chose == "scissors"
 			then loses = + 1
-		elsif computer has scissors and human has rock
+		elsif options == "scissors" && chose == "rock"
 			then win = + 1
-		elsif computer has scissors and human has paper
+		elsif options == "scissors" && chose == "paper"
 			then loses = + 1
-		elsif computer has paper and human has rock
+		elsif options == "paper" && chose == "rock"
 			then loses = + 1
-		elsif computer has paper and human has scissors
+		elsif options == "paper" && chose == "scissors"
 			then win = + 1
 		end
 end
 
 if wins > loses 
-	display "You win!"
-
-else wins < loses
-	display "You lose :("
+	then "You win!"
+elsif wins < loses
+	then "You lose!"
 end
